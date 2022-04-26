@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <!--定义form表单 form表单会采集包含的有效数据,提交到后端,进行交互-->
+        <!--
+            地址栏信息:
+            file:///Users/leomashiro/MaShiBinEdu/HTML/form表单/a.txt?user_name=lili&user_password=123123
+
+            ?之前是提交到资源的具体地址
+            ?之后是提交的具体数据
+
+            http:信息交互遵照协议 http协议
+            127.0.0.1:代表本机的IP地址
+            8020:Hbuilder内置服务器的端口号
+            PS:浏览器的地址栏是不支持中文的,都会转成编码传送,如果你在地址栏看到中文,只是当前那个浏览器给你一个友好的显示
+            PS:可以使用在线解析工具查看
+            aaa:目标资源 --》去当前项目下找aaa
+
+            ?后的内容:
+            user_name=lili&user_password=123123
+            我们写的文本框,密码框等必须要加入一个属性:name
+            然后name属性和具体录入等信息会拼成一个键值对的形式
+            多个键值对之间,用&符号进行拼接
+
+            PS:只有放在form表单中的内容才会被收集并提交
+
+            method属性:默认情况下不写method属性的时候就相当于method="get"
+            get:提交数据可见,不安全,提交数据长度有限制,效率高
+            post:提交数据不可见,安全,提交数据长度没有限制,效率低
+            
+        -->
+        <form action="aaa" method="get">
+            用户名:<input type="text" name="user_name" /><br  />
+            密码:<input type="password" name="user_password" /><br  />
+
+            <!--提交按钮-->
+            <input type="submit" />
+        </form>
+        用户名2:<input type="text" name="user1_name" />
+    </body>
+</html>
