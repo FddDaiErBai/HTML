@@ -53,8 +53,38 @@
             <input type="file" />
             <!--隐藏域-->
             <input type="hidden" name="user6_name" value="123123" />
+            <!--普通按钮:没有什么效果,就是可以点击,以后学了js,可以加入事件-->
+            <input type="button" value="普通按钮" />
+            <!--特殊按钮:重置按钮:将页面恢复到初始-->
+            <input type="reset" />
+            <!--特殊按钮:图片按钮-->
+            <input type="image" src="/Users/leomashiro/MaShiBinEdu/HTML/img/WechatIMG1.jpeg" />
             <!--特殊按钮:提交按钮:具备提交功能-->
             <input type="submit" />
+            
+            <!--下拉列表
+                默认选中:selected="selected"
+            -->
+            你喜欢的城市:
+            <select name="city" multiple="multiple">
+                <option value="0">---请选择---</option>
+                <option value="1">哈尔滨市</option>
+                <option value="2" selected="selected">青岛市</option>
+                <option value="3">郑州市</option>
+                <option value="4">天津市</option>
+                <option value="5">西安市</option>
+            </select>
+
+            <!--多行文本框
+                利用css样式来控制大小不可变:style="resize: none;"
+            -->
+            自我介绍
+            <textarea style="resize: none;" rows="10" cols="30">请在这里写信</textarea>
+            <br  />
+            <!--label标签
+                一般会在想要获得焦点的标签上加入一个id属性,然后label中的for属性跟id配合使用
+            -->
+            <label for="uname">用户名:</label><input type="text" name="user9_name" id="u_name" />
 
         </form>
     </body>
